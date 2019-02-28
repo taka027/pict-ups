@@ -1,0 +1,33 @@
+<%= render 'header' %>
+<div class="toptopic">
+  <%= form_for @form, :url => sended_path do |f| %>
+    <div>
+      <h2>メッセージ確認</h2>
+      <div>
+        <strong>名前</strong>
+        <p>
+          <%= f.hidden_field :name %>
+          <%= @form.name %>
+        </p>
+      </div>
+      <div>
+        <strong>メールアドレス</strong>
+        <p>
+          <%= f.hidden_field :email %>
+          <%= @form.email %>
+        </p>
+      </div>
+      <div>
+        <strong>内容</strong>
+        <p>
+          <%= f.hidden_field :message %>
+          <%= simple_format(@form.message) %>
+        </p>
+      </div>
+        <%= link_to '戻る', '/form', :class => "btn btn-default" %>
+        <%= f.submit '内容を送信する', :class => "btn btn-primary"  %>
+    </div>
+  <% end %>
+
+</div>
+<%= render 'footer' %>

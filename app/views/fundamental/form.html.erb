@@ -1,0 +1,38 @@
+<%= render 'header' %>
+
+<%= form_for @form, :url => confirm_path do |f| %>
+      
+    <div class="toptopic">
+        <h1 class="">問い合わせ</h1>
+        
+        <% if @form.errors.any? %>
+        <div class="alert alert-danger" role="alert">
+          <strong>入力内容にエラーがあります</strong>
+          <ul>
+            <% @form.errors.each do |attr, msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+        <% end %>
+        
+        <table class="table">
+        <tr>
+          <th>名前<span class="text-danger">（必須）</span></th>
+          <td><%= f.text_field :name %></td>
+        </tr>
+        <tr>
+          <th>メールアドレス<span class="text-danger">（必須）</span></th>
+          <td><%= f.text_field :email %></td>
+        </tr>
+        <tr>
+          <th>お問い合わせ内容</th>
+          <td><%= f.text_area :message %></td>
+        </tr>
+        </table>
+         <%= link_to "戻る", "/toppage", class: 'btn btn-default' %>
+        <%= f.submit '内容を確認', class: 'btn btn-primary' %>
+       
+    </div>    
+<% end %>
+<%= render 'footer' %>
