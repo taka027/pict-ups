@@ -92,10 +92,10 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
-    dotenv (2.6.0)
-    dotenv-rails (2.6.0)
-      dotenv (= 2.6.0)
-      railties (>= 3.2, < 6.0)
+    dotenv (2.7.1)
+    dotenv-rails (2.7.1)
+      dotenv (= 2.7.1)
+      railties (>= 3.2, < 6.1)
     erubi (1.8.0)
     execjs (2.7.0)
     ffi (1.9.25)
@@ -203,12 +203,6 @@ GEM
     sassc (2.0.0)
       ffi (~> 1.9.6)
       rake
-    sassc-rails (2.1.0)
-      railties (>= 4.0.0)
-      sassc (>= 2.0)
-      sprockets (> 3.0)
-      sprockets-rails
-      tilt
     selenium-webdriver (3.141.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2, >= 1.2.2)
@@ -275,8 +269,8 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.2)
   rmagick
+  sass
   sass-rails (~> 5.0)
-  sassc-rails
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
